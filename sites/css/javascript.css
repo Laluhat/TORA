@@ -1,0 +1,26 @@
+span{
+    color: red;
+}
+.calculator {
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    color: black;
+}
+input {
+    outline: none;
+    border: none;
+    padding: 5px;
+    color: black;
+    background-color: #EBEBEB;
+}
+button {
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+    background: white;
+    display: block;
+    margin-top: 10%;
+    cursor: pointer;
+}
