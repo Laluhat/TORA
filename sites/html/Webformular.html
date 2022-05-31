@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>portfolio</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/zzs0yrm.css" lang="ikn">
     <link rel="icon" type="image/png" href="../../img/laptop-screen.png">
@@ -19,10 +20,39 @@
         <a href="about.html">About us</a>
     </div>
 </nav>
-
-
-
-
+<main>
+    <form>
+        <p>
+            <select name="dropdown">
+            <option value="val1">Male</option>
+            <option value="val1">Female</option>
+            <option value="val1">other</option>
+            </select>
+        </p>
+    </form>
+    <form>
+        Your Name:
+        <input name="Name" type="text" size="30" maxlength="40">
+    </form>
+    <form>
+        Your Password:
+        <input name="pw" type="password" size="10" maxlength="10">
+    </form>
+    <form>
+        Message:
+        <textarea name="txt" rows="15" cols="30" maxlength="2500">
+        Put in your Message.
+        </textarea>
+    </form>
+    <form>
+        <p>Choose your Size</p>
+        <p>
+            <input type="radio" name="size" vale="small">Small<br>
+            <input type="radio" name="size" vale="medium">Medium<br>
+            <input type="radio" name="size" vale="large">Large<br>
+        </p>
+    </form>
+</main>
 <footer>
     <div class="footer-content">
         <h4 class="h4-footer">Tomas Laluha, Roxan Sivaratnam</h4>
