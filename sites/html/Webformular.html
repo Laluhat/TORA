@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>portfolio</title>
     <meta charset="UTF-8">
@@ -16,43 +16,47 @@
     <div class="nav-items">
         <a href="Calculator.html">HTML-DOM</a>
         <a href="JSON-Liste.html">JSON-Liste</a>
-        <a href="Webformular.html">Webformular</a>
         <a href="about.html">About us</a>
+        <a href="Webformular.html">Contact</a>
     </div>
 </nav>
-<main>
-    <form>
-        <p>
-            <select name="dropdown">
-            <option value="val1">Male</option>
-            <option value="val1">Female</option>
-            <option value="val1">other</option>
-            </select>
-        </p>
-    </form>
-    <form>
-        Your Name:
-        <input name="Name" type="text" size="30" maxlength="40">
-    </form>
-    <form>
-        Your Password:
-        <input name="pw" type="password" size="10" maxlength="10">
-    </form>
-    <form>
-        Message:
-        <textarea name="txt" rows="15" cols="30" maxlength="2500">
-        Put in your Message.
-        </textarea>
-    </form>
-    <form>
-        <p>Choose your Size</p>
-        <p>
-            <input type="radio" name="size" vale="small">Small<br>
-            <input type="radio" name="size" vale="medium">Medium<br>
-            <input type="radio" name="size" vale="large">Large<br>
-        </p>
-    </form>
-    <button type="submit">Submit</button>
+<main class="formular">
+
+    <div class="container">
+        <form id="form" class="form">
+            <h2 class="contacth2">Contact</h2>
+            <div class="form-control">
+                <label for="username">Gender</label>
+                <select name="dropdown">
+                    <option value="val1">Choose</option>
+                    <option value="val1">Male</option>
+                    <option value="val1">Female</option>
+                    <option value="val1">other</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="username">Name</label>
+                <input type="text" id="username" placeholder="Enter Name" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Surname</label>
+                <input type="text" id="username" placeholder="Enter Surname" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Message</label>
+                <textarea name="txt" rows="10" cols="15" maxlength="2500" class="message"  placeholder="Put in your Message."></textarea>
+                <small>Error message</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </main>
 <script src="../js/input-validate.js"></script>
 <footer>
