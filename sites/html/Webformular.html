@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>portfolio</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/zzs0yrm.css" lang="ikn">
     <link rel="icon" type="image/png" href="../../img/laptop-screen.png">
-    <link rel="stylesheet" href="../css/javascript.css">
+    <link rel="stylesheet" href="../css/formular.css">
 </head>
 <body>
 <nav>
@@ -15,14 +16,49 @@
     <div class="nav-items">
         <a href="Calculator.html">HTML-DOM</a>
         <a href="JSON-Liste.html">JSON-Liste</a>
-        <a href="Webformular.html">Webformular</a>
         <a href="about.html">About us</a>
+        <a href="Webformular.html">Contact</a>
     </div>
 </nav>
+<main class="formular">
 
-
-
-
+    <div class="container">
+        <form id="form" class="form">
+            <h2 class="contacth2">Contact</h2>
+            <div class="form-control">
+                <label for="gender">Gender</label>
+                <select name="dropdown" id="gender">
+                    <option value="val1">Choose</option>
+                    <option value="val1">Male</option>
+                    <option value="val1">Female</option>
+                    <option value="val1">other</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Name" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" placeholder="Enter Surname" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="message">Message</label>
+                <textarea name="txt" rows="10" cols="15" maxlength="2500" class="message"  placeholder="Put in your Message." id="message"></textarea>
+                <small>Error message</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</main>
+<script src="../js/input-validate.js"></script>
 <footer>
     <div class="footer-content">
         <h4 class="h4-footer">Tomas Laluha, Roxan Sivaratnam</h4>
