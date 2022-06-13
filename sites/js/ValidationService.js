@@ -11,7 +11,7 @@ function validateUser(userObj) {
     let result = validateLib.checkRequired("name", userObj.name);
     if (result.isNotValid) { return result; }
 
-    let result = validateLib.checkRequired("surname", userObj.surname);
+    result = validateLib.checkRequired("surname", userObj.surname);
     if (result.isNotValid) { return result; }
 
     result = validateLib.checkRequired("email", userObj.email);
