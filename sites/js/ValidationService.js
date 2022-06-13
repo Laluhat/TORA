@@ -24,7 +24,7 @@ function validateUser(userObj) {
     result = validateLib.checkLength("name",userObj.name, 3, 15);
     if (result.isNotValid) { return result; }
 
-    result = validateLib.checkLength("surname",userObj.surname, 3, 15);
+    result = validateLib.checkLength("surname",userObj.surname, 3, 25);
     if (result.isNotValid) { return result; }
 
     result = validateLib.checkLength("password", userObj.password, 6, 25);
