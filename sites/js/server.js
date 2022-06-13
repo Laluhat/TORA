@@ -55,7 +55,8 @@ app.post('/register', (req, res) => {
     //Daten des Posts-Requests auslesen und zusätzlich eine User-id erzeugen
     let userObj = {
         "id": uuidv4(),
-        "username": req.body.user.username,
+        "name": req.body.user.name,
+        "surname": req.body.user.surname,
         "email": req.body.user.email,
         "password": req.body.user.password
     }
@@ -77,6 +78,6 @@ app.post('/register', (req, res) => {
             .catch(error => {
                 console.error(error);
             });
-        res.status(201).send(`User ${userObj.username} inserted!`);
+        res.status(201).send(`User ${userObj.name} inserted!`);
     }
 });

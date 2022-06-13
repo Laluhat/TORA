@@ -2,7 +2,7 @@
   "name": "tora",
   "version": "1.0.0",
   "description": "",
-  "main": "01_server_get_post.js",
+  "main": "index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
