@@ -17,7 +17,7 @@ function validateUser(userObj) {
     result = validateLib.checkRequired("email", userObj.email);
     if (result.isNotValid) { return result; }
 
-    result = validateLib.checkRequired("password", userObj.password);
+    result = validateLib.checkRequired("message", userObj.message);
     if (result.isNotValid) { return result; }
 
     //check length
@@ -27,7 +27,7 @@ function validateUser(userObj) {
     result = validateLib.checkLength("surname",userObj.surname, 3, 25);
     if (result.isNotValid) { return result; }
 
-    result = validateLib.checkLength("password", userObj.password, 6, 25);
+    result = validateLib.checkLength("message",userObj.message, 8, 280);
     if (result.isNotValid) { return result; }
 
     //check email syntax
