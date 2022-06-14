@@ -4,7 +4,7 @@ htmlObj.innerHTML =
     `id: ${customer.id}<br>`+
     `Vorname: ${customer.firstname}<br>`+
     `Name: ${customer.lastname}<br>`+
-    `Geschlcht: ${customer.gender}<br>`;
+    `Geschlecht: ${customer.gender}<br>`;
 
 //Location
 htmlObj = document.getElementById("location");

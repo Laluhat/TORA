@@ -1,0 +1,25 @@
+{
+  "name": "tora",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "registrationserver": "node TORA/sites/js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laluhat/TORA.git"
+  },
+  "author": "sivaratnam roxan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Laluhat/TORA/issues"
+  },
+  "homepage": "https://github.com/Laluhat/TORA#readme"
+}
