@@ -1,3 +1,4 @@
+let ALL_INPUT_VALID
 
 const form = document.getElementById('form');
 const gender = document.getElementById('gender');
@@ -27,6 +28,7 @@ function checkEmail(input) {
         showSuccess(input);
     } else {
         showError(input, 'Email is not valid');
+        ALL_INPUT_VALID = false;
     }
 }
 // Check required fields
@@ -36,6 +38,7 @@ function checkRequired(inputArr) {
         if (input.value.trim() === '') {
             showError(input, `${getFieldName(input)} is required`);
             isRequired = true;
+            ALL_INPUT_VALID = false;
         } else {
             showSuccess(input);
         }
@@ -50,11 +53,13 @@ function checkLength(input, min, max) {
             input,
             `${getFieldName(input)} muss mindestens ${min} Zeichen enthalten`
         );
+        ALL_INPUT_VALID = false;
     } else if (input.value.length > max) {
         showError(
             input,
             `${getFieldName(input)} must be less than ${max} characters`
         );
+        ALL_INPUT_VALID = false;
     } else {
         showSuccess(input);
     }
@@ -77,11 +82,13 @@ function validateForm(){
 }
 // Event listeners
 form.addEventListener('submit', function(e) {
+    ALL_INPUT_VALID = true;
     //https://www.w3schools.com/jsref/event_preventdefault.asp
     e.preventDefault();
-    alert('Formular nicht vollständig')
+
     //First validate form
     validateForm();
-
+    if (ALL_INPUT_VALID){
+        alert('Your message was send.')
+    }
 });
-
