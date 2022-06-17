@@ -1,9 +1,3 @@
-/*
-Thema: Registration server
-Einfacher Server, um Benutzer zu registrieren
-Der Server dient zu Übung zur Validierung von Benutzereingaben im Backend.
- */
-
 'use strict';
 
 let express = require("express");
@@ -17,14 +11,13 @@ const Validation = require('./ValidationService');
 const port = process.env.PORT || 3000;
 const server = app.listen(port);
 console.log(`Running at Port ${port}`);
-server.timeout = 1000 * 60 * 2; // 2 minutes
+server.timeout = 1000 * 60 * 2;
 
-//Warning: Korrekt setzen!!
+
 const staticPath = './TORA/sites/js/data/';
 const registrationFile = staticPath+'registration.json';
 
 
-// Use middleware to set the default Content-Type
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Origin', 'http://localhost:63342');
@@ -45,14 +38,10 @@ app.use(bodyParser.json());
 // support encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/*  1. Writing to file
-    https://stackabuse.com/reading-and-writing-json-files-with-node-js/
- */
-
 app.post('/register', (req, res) => {
 
     const HTTP_STATUS_NO_ACCEPTABLE = 406;
-    //Daten des Posts-Requests auslesen und zusätzlich eine User-id erzeugen
+    //Read out Post-Request Data and generate a User-ID
     let userObj = {
         "id": uuidv4(),
         "name": req.body.user.name,
@@ -65,7 +54,7 @@ app.post('/register', (req, res) => {
     if (result.isNotValid) {
         res.status(HTTP_STATUS_NO_ACCEPTABLE).send(result.msg);
     } else {
-        //Speicherung des neuen Benutzers
+        //Saving the new user
         let userRepo = new UserRepository(registrationFile);
         userRepo.read()
             .then((data) => {
