@@ -1,11 +1,5 @@
 // Show input error message
 
-/**
- * Beschreibung
- * @param id: Identifikation des eingegebenen Datenelement
- * @param message: Fehlermeldung
- * @returns {string}
- */
 function showError(id, message) {
     return `${id}: ${message}`;
 }
@@ -17,7 +11,6 @@ function showSuccess(id) {
 
 // Check email is valid
 function checkEmail(id,input) {
-    //Default: is valid
     let result = {
         isNotValid: false,
         msg: showSuccess(id)
@@ -32,12 +25,8 @@ function checkEmail(id,input) {
     return result;
 }
 
-//TODO: Check article for throwing errors in node js
-// https://stackoverflow.com/questions/33086247/throwing-an-error-in-node-js
-
 // Check required fields
 function checkRequired(id, input) {
-    //Default: is valid
     let result = {
         isNotValid: false,
         msg: showSuccess(id)
@@ -56,7 +45,6 @@ function checkRequired(id, input) {
 
 // Check input length
 function checkLength(id, input, min, max) {
-    //Default: is valid
     let result = {
         isNotValid: false,
         msg: showSuccess(id)
@@ -76,11 +64,7 @@ function checkLength(id, input, min, max) {
     }
     return result;
 }
-
-/**
- *  Export validation functions for further usage.
- *  function to export WITHOUT brackets!
- */
+/* Export validation functions for further usage.*/
 module.exports = {
     checkEmail,
     checkLength,
