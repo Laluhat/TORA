@@ -19,10 +19,8 @@ button.addEventListener('click', () => {
         document.getElementById('weight_error').innerHTML = '';
         weight_status=true;
     }
-
     if(height_status && weight_status){
         const bmi = (weight / ((height*height)/10000)).toFixed(2);
-
         if(bmi < 18.6){
             result.innerHTML = 'Under weight : ' + bmi;
         }else if(bmi >= 18.6 && bmi < 24.9){

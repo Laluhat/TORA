@@ -1,9 +1,3 @@
-/*
-Thema: Registration server
-Einfacher Server, um Benutzer zu registrieren
-Der Server dient zu Übung zur Validierung von Benutzereingaben im Backend.
- */
-
 'use strict';
 
 let express = require("express");
@@ -12,7 +6,6 @@ let app     = express();
 const { v4: uuidv4 } = require('uuid');
 const UserRepository = require('./UserRepository');
 const Validation = require('./ValidationService');
-
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port);
@@ -23,7 +16,6 @@ server.timeout = 1000 * 60 * 2; // 2 minutes
 const staticPath = './TORA/sites/js/data/';
 const registrationFile = staticPath+'registration.json';
 
-
 // Use middleware to set the default Content-Type
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -31,7 +23,6 @@ app.use(function (req, res, next) {
     res.header('Content-Type', 'application/json');
     next();
 });
-
 
 //test uuid
 app.get('/test1', (req, res) => {
@@ -45,14 +36,9 @@ app.use(bodyParser.json());
 // support encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/*  1. Writing to file
-    https://stackabuse.com/reading-and-writing-json-files-with-node-js/
- */
-
 app.post('/register', (req, res) => {
 
     const HTTP_STATUS_NO_ACCEPTABLE = 406;
-    //Daten des Posts-Requests auslesen und zusätzlich eine User-id erzeugen
     let userObj = {
         "id": uuidv4(),
         "name": req.body.user.name,
